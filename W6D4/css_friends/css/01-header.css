@@ -1,0 +1,46 @@
+/* PHASE 1: Header */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: #eee;
+}
+
+.header {
+	/* Red color */
+	background: #f00;
+}
+
+.header-nav {
+	/* set its left and right margins to auto */
+	margin: auto;
+	
+	/* need to use flex */
+	display: flex;
+	
+	/* Justify your logo <h1> to the left, and the <ul> list of links to the right */
+	justify-content: space-between;
+	
+}
+
+.header-logo {
+	/* Forest Green color */
+	background: #228B22;
+}
+
+.header-list {
+	/* Flex is used here to have each list element side-by-side instead of on top of each other. */
+	
+	/* To get the individual <li> next to each other you'll want to again use flex. */
+	display: flex;
+	
+	/* Gold color */
+	background: #FFD700;	
+}
+
+/* Make your links block elements and add padding to them. */
+.header a {
+  display: block;
+  padding: 10px 20px;
+}
