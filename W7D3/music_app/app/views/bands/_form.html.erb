@@ -1,0 +1,26 @@
+<section class="page">
+    <div class="header-box">
+      <%# <h1>Music App</h1> %>
+      </div>
+    
+      <div class="centered-box">
+        <h1>New Band</h1>
+    
+        <%= render 'shared/errors' %>
+    
+        <form action="<%= bands_url %>" method="post">
+          <input
+            type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
+    
+          <label for="band_name">Name</label>
+          <input type="text"
+            name="band[name]"
+            id="band_name"
+            value="<%= @band.name %>">
+          <br>
+          <input type="submit">
+        </form>
+      </div>
+    </section>

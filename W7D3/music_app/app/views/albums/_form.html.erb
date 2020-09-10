@@ -1,0 +1,43 @@
+<% action = (@album.persisted? ? albums_url(album) : albums_url) %>
+<% method = (@album.persisted? ? :patch : :post) %>
+​
+<form action="<%= action %>" method="post">
+  <input type="hidden" name="_method" value="<%= method %>">
+​
+
+
+  <label for="album_title">Title</label>
+  <input
+    type="text"
+    name="album[title]"
+    id="album_title"
+    value="<%= @album.title %>">
+​
+  <label for="album_year">Year</label>
+  <input
+    type="integer"
+    name="album[year]"
+    id="album_year"
+    value="<%= @album.year %>">
+  <br>
+
+​
+  <input
+    type="radio"
+    name="album[studio]"
+    value="true"
+    id="album_studio"
+    <%= @album.studio == true ? "checked" : "" %>>
+  <label for="album_studio">Studio</label>
+  <input
+    type="radio"
+    name="album[studio]"
+    value="false"
+    id="album_live"
+    <%= @album.studio == false ? "checked" : "" %>>
+  <label for="album_live">Live</label>
+  <br>
+​
+  <% submit_text = (@album.persisted? ? 'Update' : 'Create') + ' album!' %>
+  <input type="submit" value="<%= submit_text %>">
+</form>

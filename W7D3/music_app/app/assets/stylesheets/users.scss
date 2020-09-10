@@ -1,0 +1,28 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* head {
+    
+
+  } */
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end; 
+} 
+
+a:link {
+    color: red;
+    border-radius: 50px;
+  }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gffff</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+<h1>Bands upon bands</h1>
+
+<ul>
+  <% @bands.each do |band| %>
+  <li><a href="<%= band_url(band) %>"><%= band.name %></a></li>
+  <% end %>
+</ul> 
+
+<a href="<%= new_band_url %>">Create Band</a>
+</html>
