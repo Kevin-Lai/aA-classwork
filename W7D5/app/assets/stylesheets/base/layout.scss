@@ -1,0 +1,69 @@
+/* Define application-wide selectors here!*/
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	width: 80%;
+	margin: 0 auto;
+	font-family: $serif;
+	font-size: 12px;
+}
+
+button {
+	background-color: white;
+	border-color: transparent;
+	color: black;
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 5px;
+	// transition:
+	font-family: "Arial Black";
+	// text-transform:
+	// font-size:
+	// text-align:
+}
+
+
+
+.right-nav button {
+	background-color: rgb(20, 74, 95);
+	color: white;
+}
+
+#gear button, #search-modal-btn button{
+	background-color: $lightest-gray;
+	color: black;
+}
+
+#gear button:hover, #search-modal-btn button:hover, #sections-sidebar-btnbutton:hover{
+	background-color: lightgray;
+}
+
+
+button:hover {
+	background-color: blue;
+	border-color: darkblue;
+}
+
+/*
+	Header Rules
+*/
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: $light-gray;
+}
+
+.hr-top, .hr-bottom {
+	width: 100%;
+	margin: 0;
+}
+
+.hr-top {
+	height: 2px;
+	margin-bottom: 1px;
+}
