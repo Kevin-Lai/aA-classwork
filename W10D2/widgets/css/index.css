@@ -1,0 +1,95 @@
+.root-wrapper{
+    width: 1000px;
+    margin: 20px auto;
+    border: solid 1px red;
+    font-family: 'Homemade Apple',cursive;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* CLOCK */
+.clock-wrapper{
+    border: solid 1px orange;
+    border-radius: 5px;
+    width: 800px;
+    margin: 0 auto;
+}
+.clock{
+    background-color: salmon;
+    border: solid 1px blue;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+}
+.clock p{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TABS */
+.tabs-wrapper{
+    /* border: solid 1px black; */
+    width: 30%;
+    /* margin: 0 auto; */
+    margin: 10px auto;
+}
+.tabs-header{
+    /* border: solid 1px red; */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.tabs-header li:first-child{
+    border-left: solid 2px black;
+}
+.tabs-header li:last-child{
+    border-right: solid 2px black;
+}
+.tabs-header li{
+    padding: 5px;
+    text-align: center;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    border-radius: 10px 10px 0 0;
+    width: 33.3333%;
+
+    background-color: lightgrey;
+    cursor: pointer;
+}
+.tabs-header li:hover{
+    background-color: black;
+    color: white
+}
+.tabs-header .active{
+    color: white;
+    border-bottom: 0px;
+}
+.tabs-content{
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    height: 300px;
+    padding: 15px;
+
+    background-color: lightgrey;
+}
+/* WEATHER */
+.weather-wrapper{
+    border: solid 1px green;
+    border-radius: 10px;
+    background-color: pink;
+    margin: 10px auto;
+    width: 30%;
+    padding: 15px;
+}
+.loading{
+    font-size:50px;
+}
+.weather{
+    border: solid 1px purple;
+}
+.weather p{
+    display: flex;
+    justify-content: space-between;
+}
