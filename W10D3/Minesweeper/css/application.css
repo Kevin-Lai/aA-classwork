@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 400px;
+    height: 40px;
+}
+
+.tile{
+   text-align: center;
+   background-color: darkgrey;
+   border-style: inset;
+   border-style: outset;
+   border: 2px solid;
+   width: 40px;
+   height: 40px;
+
+}
