@@ -128,7 +128,27 @@ class LinkedList {
 
     // TODO: Implement the addToHead method here
     addToHead(val) {
+		// Create a new node that will contain the value
+		let newNode = new Node(val);
+
+		// check if there is already a head node
+		if(this.head){
+			// if there is an existing head node,
+			// assign the newNode's next pointer to the current head node
+			newNode.next = this.head;
+		}
+		else{
+			// if the linked list is currently empty,
+			// set the tail to the newNode
+			this.tail = newNode;
+		}
+
+		// Set the new head to the new node
+		this.head = newNode;
 		
+		// Increment the length
+		this.length++;
+
 		// return Updated Linked List
 		return this;
     }
