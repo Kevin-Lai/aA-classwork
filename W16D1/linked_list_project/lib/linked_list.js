@@ -155,13 +155,35 @@ class LinkedList {
 
     // TODO: Implement the removeHead method here
     removeHead() {
+		if(!this.head){
+			return undefined;
+		}
+		
+		// store the current head node
+		// because we need to return it
+		let removedHead = this.head;
+		
+		// Set the current head node to the removed head's next node
+		this.head = removedHead.next;
+		
+		// Decrement the length
+		this.length--;
+		
+		// if there was only a single node in the list
+		// then, we also need to set the tail node to null
+		// because after removing the head,
+		// there would be no nodes left in the list
+		if(!this.length){
+			this.tail = null;
+		}
 		
 		// return Removed Node
+		return removedHead;
     }
 
     // TODO: Implement the contains method here
     contains(target) {
-
+		
     }
 
     // TODO: Implement the get method here
