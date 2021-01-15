@@ -184,6 +184,23 @@ class LinkedList {
     // TODO: Implement the contains method here
     contains(target) {
 		
+		// Start from the head
+		let currentNode = this.head;
+		
+		// Check each node's value to see
+		// if it matches the target
+		while(currentNode){
+			if(currentNode.val === target){
+				// if the target is found
+				// return true
+				return true;
+			}
+			currentNode = currentNode.next;
+		}
+		
+		// if the target is not found in the list,
+		// return false
+		return false;
     }
 
     // TODO: Implement the get method here
