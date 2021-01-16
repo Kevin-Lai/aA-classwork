@@ -206,14 +206,45 @@ class LinkedList {
     // TODO: Implement the get method here
     get(index) {
 		
-		// return Node at Index
+		// check if the index is less than 0
+		// or greater than the lenghth of the list
+		if(index < 0 || index >= this.length){
+			// return null immediately
+			return null;
+		}
 		
+		// iterate through the nodes starting from the head
+		let currentNode = this.head;
+
+		// keep track of the count
+		let count = 0;
+		
+		// keep looping until count is equal to the index
+		while(count < index){
+			currentNode = currentNode.next;
+			count++;
+		}
+		
+		// return the node at the index
+		return currentNode;
     }
 
     // TODO: Implement the set method here
     set(index, val) {
-
-		// return true if successful
+		// get the node that will need to be set
+		let indexNode = this.get(index);
+		
+		// if the node exists in the list
+		if(indexNode){
+			// set the node's value to the new value
+			indexNode.val = val;
+			
+			// return true if successful
+			return true;
+		}
+		
+		// else, return false
+		return false;
     }
 
     // TODO: Implement the insert method here
