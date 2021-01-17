@@ -249,8 +249,51 @@ class LinkedList {
 
     // TODO: Implement the insert method here
     insert(index, val) {
+		// check if the index is less than 0
+		// or greater than the lenghth of the list
+		if(index < 0 || index >= this.length){
+			// return false immediately
+			// because it is outside of range to insert
+			return false;
+		}
+		else if(index === 0){
+			// add to head if index is the first index in the list
+			this.addToHead(val);
+			
+			// return true after insert
+			return true;
+		}
+		else if(index === this.length-1){
+			// add to tail if index is the last index in the list
+			this.addToTail(val);
+			
+			// return true after insert
+			return true;
+		}
+
+		// get the node that is one index before the insertion index
+		let prevNode = this.get(index-1);
+		
+		// store the prevNode's next pointer
+		let tempNode = prevNode.next;
+		
+		// create a new node for the insertion value
+		let newNode = new Node(val);
+		
+		// set the prevNode.next to the new node
+		prevNode.next = newNode;
+		
+		// set the newNode.next to the tempNode
+		newNode.next = tempNode;
+		
+		// so it looks like this:
+		// prevNode -> newNode -> prevNode.next
+		
+		// increment the length of the list
+		this.length++;
 		
 		// return true if successful
+		return true;
     }
 
     // TODO: Implement the remove method here
