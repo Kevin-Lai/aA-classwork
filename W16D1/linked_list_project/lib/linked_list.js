@@ -298,8 +298,39 @@ class LinkedList {
 
     // TODO: Implement the remove method here
     remove(index) {
+		if(index < 0 || index >= this.length){
+			// return undefined immediately
+			// because it is outside of range to insert
+			return undefined;
+		}
+		else if(index === 0){
+			// if index is 0, return the removed head
+			return this.removeHead();
+		}
+		else if(index === this.length-1){
+			// if the index is the last index in the list, return the removed tail
+			return this.removeTail();
+		}
+
+		// get the node that is one index before the index of the node to remove
+		let prevNode = this.get(index-1);
+		
+		// take the node to remove to return later
+		let removeNode = prevNode.next;
+		
+		// then, take the node after the node to remove
+		let tempNode = removeNode.next;
+		
+		// set the prevNode.next to the tempNode
+		prevNode.next = tempNode;
+		
+		// previously, list looks like:
+		// prevNode -> removeNode -> tempNode
+		// now, list looks like:
+		// prevNode -> tempNode
 		
 		// return Removed Node
+		return removeNode;
     }
 
     // TODO: Implement the size method here
