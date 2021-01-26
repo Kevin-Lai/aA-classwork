@@ -29,8 +29,23 @@ function binarySearch(array, target) {
 	}
 }
 
-function binarySearchIndex(array, target) {
+function binarySearchIndex(array, target, lo=0, hi=array.length - 1) {
+    
+	// this version returns the index of the target if found
+	
+	if (lo === hi) {
+        return -1;
+    }
 
+    let middleIndex = Math.floor((lo + hi) / 2);
+
+    if (target < array[middleIndex]) {
+        return binarySearchIndex(array, target, lo, middleIndex);
+    } else if (target > array[middleIndex]) {
+        return binarySearchIndex(array, target, middleIndex + 1, hi);
+    } else {
+        return middleIndex;
+    }
 }
 
 
